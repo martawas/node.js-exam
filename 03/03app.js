@@ -15,20 +15,16 @@
 
 //     Podpowiedź: jest to możliwe przy użyciu wbudowanych modułów Node.js.
 
-
-
-const fs = require('fs');
-const path = __filename
+const fs = require("fs");
+const path = __filename;
 
 fs.stat(path, (error, stats) => {
-	if (error) {
-		console.log(error);
-		// ?? 	throw new Error(error);
-	} 
-	else {
-		console.log(`File name: ${path}`);
-		console.log(`Time of file creation: ${stats.birthtime}`),
-		console.log(`Time of last file modification: ${stats.mtime}`),
-		console.log(`File size: ${stats.size}`);
-	}
-	});
+  if (error) {
+    console.log(error);
+  } else {
+    console.log(`File name: ${path}`);
+    console.log(`Time of file creation: ${stats.birthtime}`),
+      console.log(`Time of last file modification: ${stats.mtime}`),
+      console.log(`File size: ${stats.size}`);
+  }
+});
